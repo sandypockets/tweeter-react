@@ -27,12 +27,12 @@ const initialTweetData = [
 function App() {
   const [tweetData, setTweetData] = useState(initialTweetData)
 
-  const addNewTweet = () => {
+  const addNewTweet = (text) => {
     const newTweet = {
         name: "Andy Bernard",
         handle: "@herecomestrebel",
         avatar: "https://i.imgur.com/2WZt0D6.png",
-        text: "Do not test my politeness",
+        text,
         date: "15 days ago"
     }
     setTweetData([newTweet, ...tweetData])
@@ -43,12 +43,12 @@ function App() {
   })
 
   return (
-    <div className="App" onClick={addNewTweet}>
+    <div className="App">
       <div className={'page-container'}>
       <Navigation />
       <Profile />
       <main className={'container'}>
-        <TweetForm />
+        <TweetForm addNewTweet={addNewTweet} />
         <section className={'tweets'}>
           {tweets}
         </section>
