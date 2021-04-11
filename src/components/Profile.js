@@ -5,7 +5,7 @@ export const Profile = () => {
   return(
     <header className="page-header">
       <div className="profile-image">
-        <img alt={'some-alt-text'} src="/images/profile-hex.png" />
+        <img alt={'some-alt-text'} src="/profile-hex.png" />
       </div>
       <br />
       <div className="profile-name">
