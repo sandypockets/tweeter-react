@@ -24,8 +24,8 @@ const tweetsData = [
 
 
 function App() {
-  const tweets = tweetsData.map(tweetData => {
-    return <Tweet name={tweetData.name} handle={tweetData.handle} text={tweetData.text} date={tweetData.date}/>
+  const tweets = tweetsData.map((tweetData, index) => {
+    return <Tweet key={index} name={tweetData.name} handle={tweetData.handle} text={tweetData.text} date={tweetData.date}/>
   })
 
   return (
