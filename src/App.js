@@ -11,10 +11,14 @@ import { Tweet } from "./components/Tweet";
 function App() {
   return (
     <div className="App">
+      <div className={'page-container'}>
       <Navigation />
       <Profile />
-      <TweetForm />
+      <div className={'container'}>
+        <TweetForm />
       <Tweet />
+      </div>
+      </div>
     </div>
   );
 }
