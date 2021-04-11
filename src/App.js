@@ -5,7 +5,7 @@ import { TweetForm } from "./components/TweetForm";
 import { Tweet } from "./components/Tweet";
 
 
-const tweets = [
+const tweetsData = [
   {
     name: "Michael Scott",
     handle: "@greatscott",
@@ -24,6 +24,10 @@ const tweets = [
 
 
 function App() {
+  const tweets = tweetsData.map(tweetData => {
+    return <Tweet name={tweetData.name} handle={tweetData.handle} text={tweetData.text} date={tweetData.date}/>
+  })
+
   return (
     <div className="App">
       <div className={'page-container'}>
@@ -32,9 +36,7 @@ function App() {
       <main className={'container'}>
         <TweetForm />
         <section className={'tweets'}>
-          <Tweet name={tweets[0].name} handle={tweets[0].handle} text={tweets[0].text} date={tweets[0].date}/>
-          {/* Adding second tweet for styling/debugging */}
-          <Tweet name={tweets[1].name} handle={tweets[1].handle} text={tweets[1].text} date={tweets[1].date}/>
+          {tweets}
         </section>
       </main>
       </div>
