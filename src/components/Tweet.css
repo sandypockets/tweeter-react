@@ -64,7 +64,7 @@ main article {
 }
 
 .tweet-body {
-    width: 95%;
+    width: auto;
     display: flex;
     justify-content: flex-start;
     margin-left: 2em;
