@@ -29,8 +29,7 @@ export const TweetForm = props => {
           </div>
         </form>
       </div>
-      <h3 className="error-exceed-chars">Your tweet is too long!</h3>
-      <h3 className="error-empty-tweet">You can't submit an empty tweet!</h3>
+      {tweetRemainingLength < 0 && <h3 className="error-exceed-chars">Your tweet is too long!</h3>}
     </section>
   )
 }
