@@ -45,8 +45,8 @@ function App() {
   return (
     <div className="App">
       <div className={'page-container'}>
-      <Navigation />
-      <Profile />
+      <Navigation className={'content-container'} />
+      <Profile className={'content-container'} />
       <main className={'container'}>
         <TweetForm addNewTweet={addNewTweet} />
         <section className={'tweets'}>
